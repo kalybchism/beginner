@@ -1,0 +1,47 @@
+import random
+
+choice = ['r', 'p', 's']
+
+
+def quit_game():
+    rounds = False
+    return rounds
+
+def Comparison():
+    if your_choice == computers_choice:
+        print("You tied! Try again.")
+    if your_choice == "r" and computers_choice == "p":
+        print("Computer wins this round, the computer chose scissors. Try again.")
+    if your_choice == "r" and computers_choice == "s":
+        print('You won this round!')
+    if your_choice == "p" and computers_choice == "r":
+        print('You won this round!')
+    if your_choice == "p" and computers_choice == "s":
+        print("Computer wins this round, the computer chose scissors. Try again.")
+    if your_choice == "s" and computers_choice == "r":
+        print("Computer wins this round, the computer chose scissors. Try again.")
+    if your_choice == "s" and computers_choice == "p":
+        print('You won this round!')
+
+print("Rock, paper, scissors simulator")
+
+       
+rounds = True
+while rounds:
+    computers_choice = random.choice(choice)
+    your_choice = input("Rock, paper, scissors shoot! Which do you choose? R/P/S: ").lower()
+    if your_choice == "quit":
+        print("Thanks for playing, play again soon!")
+        rounds = False
+    if your_choice != "quit":
+        Comparison()
+    
+
+else:
+    quit()
+
+
+
+
+
+
